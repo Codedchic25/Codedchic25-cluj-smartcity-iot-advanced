@@ -309,16 +309,8 @@ The platform features a rigorous, isolated, asynchronous validation test suite p
 * **Non-Blocking Concurrent Dispatch:** Simulates high-density sensory storm packages utilizing native `asyncio.gather` pipeline tracks.
 * **Temporal Cooldown Filter:** Validates anti-spam log guardrails to suppress redundant identical localized disk operations.
 
-### Execution Blueprint
-
-Before firing the test suite, ensure the asynchronous bridging extensions are active inside your local virtual environment:
-
-```powershell
-# Inject runtime synchronization vectors
-uv add pytest-asyncio greenlet
-
 # Execute the core isolation test runner matrix
-uv run --active pytest ai_tests/
+uv run pytest ai_tests/test_alerts_offline.py -v
 
 ---
 
@@ -327,12 +319,12 @@ uv run --active pytest ai_tests/
 The application validates live metrics against custom execution boundaries defined by administrators directly in the control panel.
 
 ### Mathematical Assertion Formula
-The local alert engine calculates the system state boolean (\(A\)) using a strict conditional inequality for resources such as soil moisture (\(V_{soil}\)) vs the configured safety boundary threshold (\(P_{soil}\)):
+The local alert engine calculates the system state boolean (A) using a strict conditional inequality for resources such as soil moisture (\(V_{soil}\)) vs the configured safety boundary threshold (\(P_{soil}\)):
 
-* If \(V_{soil} < P_{soil} \rightarrow\) System State \(A = 1\) (Critical Alert Triggered)
-* Otherwise \(\rightarrow\) System State \(A = 0\) (System Nominal)
+* If \(V_{soil} < P_{soil} \rightarrow\) System State A = 1 (Critical Alert Triggered)
+* Otherwise → System State A = 0 (System Nominal)
 
-If \(A = 1\), the application triggers a critical localized visual alert card banner inside the user interface thread and dispatches the record to the `security_alerts.log` audit stream, honoring the strict 10-second cooldown barrier.
+If A = 1, the application triggers a critical localized visual alert card banner inside the user interface thread and dispatches the record to the `security_alerts.log` audit stream, honoring the strict 10-second cooldown barrier.
 
 ---
 
@@ -341,15 +333,16 @@ If \(A = 1\), the application triggers a critical localized visual alert card ba
 The analytical engine operates with quick matrix calculations to determine environmental drifts.
 
 ### 1. Pearson Correlation Coefficient Evaluation
-The platform computes a real-time heatmap correlation matrix to identify positive or negative linear dependencies between automobile density and air degradation using the standard coefficient formula:
+The platform computes a real-time heatmap correlation matrix to identify positive or negative linear dependencies between traffic load and air degradation using the standard coefficient formula:
 
 \[r_{xy} = \frac{\text{Covariance}(x, y)}{\text{StdDev}(x) \times \text{StdDev}(y)}\]
 
 ### 2. Predictive AI Forecasting Model & Contextual Ingestion
-* **Linear Regression Engine:** Leveraging `scikit-learn` Linear Regression, the application isolates historical metrics, computes the growth slope (\(y = b_0 + b_1 x\)), and plots the next 3 future prediction points natively on the Plotly charts.
-* **Advanced Qwen Inference Pipeline:** Beyond classical regression, the platform utilizes the **Qwen 3.6-27B** model to generate administrative recommendations. The engineering prompt is enriched dynamically (Context-Aware Grounding) using the last 5 logs extracted from the physical `security_alerts.log` and the station's live parameters. Results are safely isolated inside `st.session_state` to withstand Streamlit's 5-second automatic UI refresh loop.
+* **Linear Regression Engine:** Leveraging `scikit-learn` Linear Regression, the application isolates historical metrics, computes the growth slope (y = b₀ + b₁ x), and plots the next 3 future prediction points natively on the Plotly charts.
+* **Context-Aware Inference Pipeline:** Beyond classical regression, the platform utilizes the specialized **`openai/gpt-oss-20b`** model via `GroqProvider` to generate administrative recommendations. The engineering prompt is enriched dynamically (Context-Aware Grounding) using the last 5 logs extracted from the physical `security_alerts.log` and the station's live parameters. Results are safely isolated inside `st.session_state` to withstand Streamlit's automatic UI refresh loop.
 
 ---
+
 ## 🔒 Cryptographic Credential Hardening (MD5 & Constant-Time Validation Pipeline)
 
 To eliminate the risk of plain-text administrative password exposure within the configuration layer, the platform incorporates a zero-dependency verification pipeline. Instead of storing raw passwords, the local `.env` configuration file encapsulates a secure **hexadecimal cryptographic digest (hash)**.
