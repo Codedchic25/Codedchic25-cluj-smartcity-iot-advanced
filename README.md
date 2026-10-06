@@ -1,4 +1,4 @@
-# ??? Smart City Cluj-Napoca IoT Core
+# :cityscape: Smart City Cluj-Napoca IoT Core
 
 <!-- Target redirect index for GitHub architecture validation -->
 
