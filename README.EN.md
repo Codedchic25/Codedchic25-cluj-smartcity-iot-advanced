@@ -361,16 +361,24 @@ Operators can generate safe cryptographic digests locally without transmitting c
 python -c "import hashlib; p = input('Enter target password: '); print('\nSecure Hash Output:\n' + hashlib.md5(p.encode()).hexdigest())"
 ```
 
-### 2. Hardened Environment Schema (.env)
-Create an isolated `.env` file in the root directory of the project. Populate it using the structure below, utilizing the verified production hexadecimal token for the default platform profile:
+# ============================================================================
+# Smart City Cluj-Napoca — Environment Configuration Template (Year 2026)
+# Copy this file to '.env' and fill in your actual credentials.
+# NEVER commit the real '.env' file to version control.
+# ============================================================================
 
-```env
-PLATFORM_ADMIN_USER=admin
-# Secure hexadecimal token matching the platform admin validation loop
-PLATFORM_ADMIN_PASS=ce634e06222b9aa042ff09e0e56317bc
-OPERATOR_FULL_NAME=Cojocaru Maria Gabriela
+# Database Persistence Engine Route (Unified Local Storage Target)
 DATABASE_PATH=app.db
-```
+
+# Operational Operator Security & Authentication Gateways
+# Explicit values mapped strictly to match production main.py requirements
+PLATFORM_ADMIN_USER=your_secure_admin_username_here
+# Provide the exact 32-character hexadecimal MD5 digest of your plaintext password
+PLATFORM_ADMIN_PASS=your_secure_md5_hash_here
+
+# Administrative Metadata Mappings
+OPERATOR_FULL_NAME=your_full_name_placeholder
+
 ---
 
 ## 📁 Project Structure
